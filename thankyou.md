@@ -28,3 +28,7 @@ big, to improve Taiga's overall security rating.
 - Petar Kosic ( Sec-Research GmbH )
 
 - Kunal Mhaske
+
+### 2022
+
+- Husnain Iqbal (CEO of Alpha Inferno PVT LTD)
