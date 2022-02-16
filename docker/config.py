@@ -22,6 +22,7 @@ DATABASES = {
         'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
         'HOST': os.getenv('POSTGRES_HOST'),
         'PORT': os.getenv('POSTGRES_PORT','5432'),
+        'OPTIONS': {'sslmode': os.getenv('POSTGRES_SSLMODE','disable')},
     }
 }
 SECRET_KEY = os.getenv('TAIGA_SECRET_KEY')
