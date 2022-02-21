@@ -556,7 +556,7 @@ def test_push_event_task_bad_processing_non_existing_ref(client):
     assert len(mail.outbox) == 0
 
 
-def test_push_event_task_bad_processing_non_existing_ref(client):
+def test_push_event_task_bad_processing_non_existing_ref_two(client):
     issue_status = f.IssueStatusFactory()
     payload = {
         "actor": {

@@ -1095,7 +1095,7 @@ def test_issues_event_opened_issue_connected_with_external_one(client):
     assert issue.status == issue.project.default_issue_status
 
 
-def test_issues_event_updated_issue_without_connection(client):
+def test_issues_event_updated_issue_without_connection_two(client):
     issue = f.IssueFactory.create(external_reference=[])
     issue.project.default_issue_status = issue.status
     issue.project.default_issue_type = issue.type

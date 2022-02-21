@@ -336,7 +336,7 @@ def test_get_auth_token_error_inactive_user(client, settings):
     assert response.status_code == 401, response.data
 
 
-def test_get_auth_token_error_inactive_user(client, settings):
+def test_get_auth_token_error_inactive_user_two(client, settings):
     settings.PUBLIC_REGISTER_ENABLED = False
     user = factories.UserFactory(is_active=False)
 

@@ -731,7 +731,7 @@ def test_api_edit_membership(client):
     assert response.status_code == 200
 
 
-def test_api_edit_membership(client):
+def test_api_edit_membership_two(client):
     membership = f.MembershipFactory(is_admin=True)
     client.login(membership.user)
     url = reverse("memberships-detail", args=[membership.id])
