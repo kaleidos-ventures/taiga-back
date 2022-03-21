@@ -34,16 +34,16 @@ msgstr ""
 "Project-Id-Version: taiga-back\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-05 10:55+0200\n"
-"PO-Revision-Date: 2021-02-26 11:31+0000\n"
-"Last-Translator: Taiga Dev Team <support@taiga.io>\n"
-"Language-Team: German (http://www.transifex.com/taiga-agile-llc/taiga-back/"
-"language/de/)\n"
+"PO-Revision-Date: 2022-03-22 10:59+0000\n"
+"Last-Translator: Gio <mail@gionathandiani.name>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/taiga/taiga-back/"
+"de/>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: taiga/auth/api.py:69
 msgid "Public registration is disabled."
@@ -925,6 +925,14 @@ msgid ""
 "    <p><small>%(signature)s</small></p>\n"
 "    "
 msgstr ""
+"\n"
+"    <h1>Projekt dump importiert</h1>\n"
+"    <p>Hallo %(user)s,</p>\n"
+"    <h3>Dein Projekt dump wurde erfolgreich importiert.</h3>\n"
+"    <a class=\"button\" href=\"%(url)s\" title=\"Wechsle zum Projekt "
+"%(project)s\">Zum %(project)s wechseln</a>\n"
+"    <p><small>%(signature)s</small></p>\n"
+"    "
 
 #: taiga/export_import/templates/emails/load_dump-body-text.jinja:1
 #, python-format
@@ -941,6 +949,17 @@ msgid ""
 "---\n"
 "%(signature)s\n"
 msgstr ""
+"\n"
+"Hallo %(user)s,\n"
+"\n"
+"Dein Projekt dump wurde erfolgreich importiert.\n"
+"\n"
+"Du kannst das Projekt %(project)s unter folgender Adresse erreichen:\n"
+"\n"
+"%(url)s\n"
+"\n"
+"---\n"
+"%(signature)s\n"
 
 #: taiga/export_import/templates/emails/load_dump-subject.jinja:1
 #, python-format
@@ -959,12 +978,12 @@ msgstr "Invalider Inhalt. Er muss wie folgt sein: {\"key\": \"value\",...}"
 #: taiga/export_import/validators/validators.py:197
 #: taiga/projects/custom_attributes/validators.py:122
 msgid "It contains invalid custom fields."
-msgstr ""
+msgstr "Enthält ungültige benutzerdefinierte Felder."
 
 #: taiga/export_import/validators/validators.py:277
 #: taiga/projects/validators.py:52
 msgid "Duplicated name"
-msgstr ""
+msgstr "Duplizierter Name"
 
 #: taiga/export_import/validators/validators.py:312
 #, python-format
@@ -972,6 +991,8 @@ msgid ""
 "An Epic has a related story from an external project (%(project)s) and "
 "cannot be imported"
 msgstr ""
+"Ein Epic enthält eine zugehörige Story aus einem externen Projekt "
+"(%(project)s) und kann nicht importiert werden"
 
 #: taiga/external_apps/api.py:41 taiga/external_apps/api.py:68
 #: taiga/external_apps/api.py:80
@@ -1081,12 +1102,15 @@ msgstr "Zusätzliche Information"
 #: taiga/feedback/templates/emails/feedback_notification-body-html.jinja:30
 #: taiga/projects/contact/templates/emails/contact_notification-body-html.jinja:25
 #: taiga/projects/templates/emails/transfer_accept-body-html.jinja:18
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "\n"
 "        <p><small>%(signature)s</small></p>\n"
 "    "
 msgstr ""
+"\n"
+"        <p><small>%(signature)s</small></p>\n"
+"    "
 
 #: taiga/feedback/templates/emails/feedback_notification-body-text.jinja:1
 #, python-format
@@ -1116,12 +1140,15 @@ msgstr "- Zusätzliche Information:"
 #: taiga/projects/templates/emails/transfer_reject-body-text.jinja:18
 #: taiga/projects/templates/emails/transfer_request-body-text.jinja:12
 #: taiga/projects/templates/emails/transfer_start-body-text.jinja:17
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "\n"
 "---\n"
 "%(signature)s\n"
 msgstr ""
+"\n"
+"---\n"
+"%(signature)s\n"
 
 #: taiga/feedback/templates/emails/feedback_notification-subject.jinja:1
 #, python-format
@@ -1135,7 +1162,7 @@ msgstr ""
 
 #: taiga/hooks/api.py:52
 msgid "The payload is not valid json"
-msgstr ""
+msgstr "Der Payload ist kein gültiges JSON"
 
 #: taiga/hooks/api.py:61 taiga/projects/epics/api.py:152
 #: taiga/projects/issues/api.py:146 taiga/projects/tasks/api.py:214
@@ -1155,6 +1182,10 @@ msgid ""
 "\n"
 "\"{comment_message}\""
 msgstr ""
+"[{user_name}]({user_url} \"Siehe {user_name}'s {platform} Profil\") "
+"kommentiert in [{platform}#{number}]({comment_url} \"Gehe zum Kommentar\"):\n"
+"\n"
+"\"{comment_message}\""
 
 #: taiga/hooks/event_hooks.py:84
 #, python-brace-format
@@ -1177,6 +1208,8 @@ msgid ""
 "Issue created by [{user_name}]({user_url} \"See {user_name}'s {platform} "
 "profile\") from [{platform}#{number}]({url} \"Go to issue\")."
 msgstr ""
+"Ticket erstellt von [{user_name}]({user_url} \"Siehe {user_name}'s {platform}"
+" Profil\") von [{platform}#{number}]({url} \"Wechsle zum Ticket\")."
 
 #: taiga/hooks/event_hooks.py:147
 #, python-brace-format
@@ -1189,11 +1222,13 @@ msgid ""
 "Issue modified by [{user_name}]({user_url} \"See {user_name}'s {platform} "
 "profile\") from [{platform}#{number}]({url} \"Go to issue\")."
 msgstr ""
+"Ticket von [{user_name}]({user_url} \"Siehe {user_name}'s {platform} Profil\""
+") bearbeitet von [{platform}#{number}]({url} \"Wechsle zum Ticket\")."
 
 #: taiga/hooks/event_hooks.py:159
 #, python-brace-format
 msgid "Issue modified from {platform}."
-msgstr ""
+msgstr "Ticket bearbeitet von {platform}."
 
 #: taiga/hooks/event_hooks.py:167
 #, python-brace-format
@@ -1201,11 +1236,13 @@ msgid ""
 "Issue closed by [{user_name}]({user_url} \"See {user_name}'s {platform} "
 "profile\") from [{platform}#{number}]({url} \"Go to issue\")."
 msgstr ""
+"Ticket von [{user_name}]({user_url} \"Siehe {user_name}'s {platform} Profil\""
+") der [{platform}#{number}]({url} \"Gehe zum Ticket\") geschlossen."
 
 #: taiga/hooks/event_hooks.py:171
 #, python-brace-format
 msgid "Issue closed from {platform}."
-msgstr ""
+msgstr "Ticket von {platform} geschlossen."
 
 #: taiga/hooks/event_hooks.py:179
 #, python-brace-format
@@ -1217,7 +1254,7 @@ msgstr ""
 #: taiga/hooks/event_hooks.py:183
 #, python-brace-format
 msgid "Issue reopened from {platform}."
-msgstr ""
+msgstr "Ticket von {platform} wiedereröffnet."
 
 #: taiga/hooks/event_hooks.py:278
 msgid "Invalid issue information"
@@ -1235,6 +1272,10 @@ msgid ""
 "\n"
 "  - Status: **{src_status}** → **{dst_status}**"
 msgstr ""
+"{user_text} hat den Status vom [{platform} Commit]({commit_url} \"Siehe "
+"Commit '{commit_id} - {commit_short_message}'\") geändert\n"
+"\n"
+"  - Status: **{src_status}** → **{dst_status}**"
 
 #: taiga/hooks/event_hooks.py:312
 #, python-brace-format
@@ -1243,6 +1284,9 @@ msgid ""
 "\n"
 " - Status: **{src_status}** → **{dst_status}**"
 msgstr ""
+"Veränderter Status von  {platform} Commit.\n"
+"\n"
+" - Status: **{src_status}** → **{dst_status}**"
 
 #: taiga/hooks/event_hooks.py:330
 #, python-brace-format
@@ -1251,6 +1295,9 @@ msgid ""
 "({commit_url} \"See commit '{commit_id} - {commit_short_message}'\") "
 "\"{commit_message}\""
 msgstr ""
+"Dieser {type_name} wurde von {user_text} im [{platform} Commit]({commit_url} "
+"\"Siehe Commit '{commit_id} - {commit_short_message}'\") \"{commit_message}\""
+" erwähnt"
 
 #: taiga/hooks/event_hooks.py:335
 #, python-brace-format
@@ -1287,7 +1334,7 @@ msgstr "Request an Asana API fehlgeschlagen"
 
 #: taiga/importers/asana/api.py:130 taiga/importers/github/api.py:124
 msgid "Code param needed"
-msgstr ""
+msgstr "Code Parameter benötigt"
 
 #: taiga/importers/asana/tasks.py:40 taiga/importers/asana/tasks.py:41
 msgid "Error importing Asana project"
@@ -1317,6 +1364,10 @@ msgid ""
 "version.\n"
 "                Taiga does not support Jira releases from 8.6."
 msgstr ""
+"\n"
+"                Es gab einen Fehler; Wahrscheinlich wegen einer nicht "
+"unterstützten Jira Version.\n"
+"                Taiga unterstützt keine Jira Releas vor 8.6."
 
 #: taiga/importers/jira/api.py:167
 msgid "Invalid project_type {}"
@@ -1351,6 +1402,14 @@ msgid ""
 "    <p><small>%(signature)s</small></p>\n"
 "    "
 msgstr ""
+"\n"
+"    <h1>Asana Projekt importiert</h1>\n"
+"    <p>Hallo %(user)s,</p>\n"
+"    <h3>Dein Asana Projekt wurde erfolgreich importiert.</h3>\n"
+"    <a class=\"button\" href=\"%(url)s\" title=\"Wechsle zum %(project)s\""
+">Zum %(project)s wechseln</a>\n"
+"    <p><small>%(signature)s</small></p>\n"
+"    "
 
 #: taiga/importers/templates/emails/asana_import_success-body-text.jinja:1
 #, python-format
@@ -1367,6 +1426,17 @@ msgid ""
 "---\n"
 "%(signature)s\n"
 msgstr ""
+"\n"
+"Hallo %(user)s,\n"
+"\n"
+"Dein Asana Projekt wurde erfolgreich importiert.\n"
+"\n"
+"Du kannst das Projekt unter folgender Adresse %(project)s erreichen:\n"
+"\n"
+"%(url)s\n"
+"\n"
+"---\n"
+"%(signature)s\n"
 
 #: taiga/importers/templates/emails/asana_import_success-subject.jinja:1
 #, python-format
@@ -1385,6 +1455,14 @@ msgid ""
 "    <p><small>%(signature)s</small></p>\n"
 "    "
 msgstr ""
+"\n"
+"    <h1>GitHub Projekt importiert</h1>\n"
+"    <p>Hallo %(user)s,</p>\n"
+"    <h3>Dein GitHub Projekt wurde erfolgreich importiert.</h3>\n"
+"    <a class=\"button\" href=\"%(url)s\" title=\"Wechsle zum %(project)s\""
+">Zum %(project)s wechseln</a>\n"
+"    <p><small>%(signature)s</small></p>\n"
+"    "
 
 #: taiga/importers/templates/emails/github_import_success-body-text.jinja:1
 #, python-format
@@ -1401,6 +1479,17 @@ msgid ""
 "---\n"
 "%(signature)s\n"
 msgstr ""
+"\n"
+"Hallo %(user)s,\n"
+"\n"
+"Dein GitHub Projekt wurde erfolgreich importiert.\n"
+"\n"
+"Du erreichst das Projekt %(project)s unter folgender Adresse:\n"
+"\n"
+"%(url)s\n"
+"\n"
+"---\n"
+"%(signature)s\n"
 
 #: taiga/importers/templates/emails/github_import_success-subject.jinja:1
 #, python-format
