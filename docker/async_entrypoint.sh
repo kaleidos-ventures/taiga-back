@@ -8,13 +8,18 @@
 
 set -euo pipefail
 
-# Give permission to taiga:taiga after mounting volumes
-echo Give permission to taiga:taiga
-chown -R taiga:taiga /taiga-back
+cmd=( celery -A taiga.celery worker -B --concurrency 4 -l INFO "$@" )
 
-# Start Celery processes
-echo Starting Celery...
-exec gosu taiga celery -A taiga.celery worker -B \
-    --concurrency 4 \
-    -l INFO \
-    "$@"
+if [ "$(id -u)" -eq 0 ]; then
+    # Give permission to taiga:taiga after mounting volumes
+    echo Give permission to taiga:taiga
+    # chown -R taiga:taiga /taiga-back
+
+    # Start Celery processes
+    echo Starting Celery...
+    exec gosu taiga "${cmd[@]}"
+else
+    # Start Celery processes
+    echo Starting Celery...
+    exec "${cmd[@]}"
+fi
