@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: taiga-back\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-05 10:55+0200\n"
-"PO-Revision-Date: 2021-11-03 14:34+0000\n"
+"PO-Revision-Date: 2022-02-09 10:54+0000\n"
 "Last-Translator: random r <epsilin@yopmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/taiga/taiga-back/"
 "it/>\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 4.11-dev\n"
 
 #: taiga/auth/api.py:69
 msgid "Public registration is disabled."
@@ -488,19 +488,19 @@ msgstr "Errore indirizzo IP"
 
 #: taiga/events/events.py:119
 msgid "User story created"
-msgstr ""
+msgstr "Storia utente creata"
 
 #: taiga/events/events.py:122
 msgid "User story changed"
-msgstr ""
+msgstr "Storia utente modificata"
 
 #: taiga/events/events.py:125
 msgid "User story deleted"
-msgstr ""
+msgstr "Storia utente eliminata"
 
 #: taiga/events/events.py:127
 msgid "US #{} - {}"
-msgstr ""
+msgstr "SU #{} - {}"
 
 #: taiga/events/events.py:130
 msgid "Task created"
