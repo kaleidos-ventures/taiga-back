@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-08 12:10+0000\n"
-"PO-Revision-Date: 2023-07-17 10:04+0000\n"
+"PO-Revision-Date: 2024-03-02 13:02+0000\n"
 "Last-Translator: Reza Almanda <rezaalmanda27@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/taiga/"
 "taiga-back/id/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: taiga/auth/api.py:79
 msgid "invalid login type"
@@ -2986,6 +2986,14 @@ msgid ""
 "    <p><small>%(signature)s</small></p>\n"
 "    "
 msgstr ""
+"\n"
+"    <h1>Tugas baru dibuat pada %(project)s</h1>\n"
+"    <p>Halo %(user)s,<br />%(changer)s telah membuat tugas baru:</p>\n"
+"    <p><strong>#%(ref)s %(subject)s</strong></p>\n"
+"    <a class=\"button\" href=\"%(url)s\" title=\"See Task #%(ref)s %(subject)"
+"s\">Lihat tugas</a>\n"
+"    <p><small>%(signature)s</small></p>\n"
+"    "
 
 #: taiga/projects/notifications/templates/emails/tasks/task-create-body-text.jinja:9
 #, python-format
@@ -3009,6 +3017,8 @@ msgid ""
 "\n"
 "[%(project)s] Created the task #%(ref)s \"%(subject)s\"\n"
 msgstr ""
+"\n"
+"[%(project)s] Membuat tugas #%(ref)s \"%(subject)s\"\n"
 
 #: taiga/projects/notifications/templates/emails/tasks/task-delete-body-html.jinja:12
 #, python-format
@@ -3020,6 +3030,12 @@ msgid ""
 "    <p><small>%(signature)s</small></p>\n"
 "    "
 msgstr ""
+"\n"
+"    <h1>Tugas dihapus pada %(project)s</h1>\n"
+"    <p>Halo %(user)s,<br />%(changer)s telah menghapus tugas:</p>\n"
+"    <p><strong>#%(ref)s %(subject)s</strong></p>\n"
+"    <p><small>%(signature)s</small></p>\n"
+"    "
 
 #: taiga/projects/notifications/templates/emails/tasks/task-delete-body-text.jinja:9
 #, python-format
@@ -3034,6 +3050,15 @@ msgid ""
 "---\n"
 "%(signature)s\n"
 msgstr ""
+"\n"
+"Tugas dihapus pada %(project)s\n"
+"\n"
+"Halo %(user)s, %(changer)s telah menghapus tugas:\n"
+"\n"
+"#%(ref)s %(subject)s\n"
+"\n"
+"---\n"
+"%(signature)s\n"
 
 #: taiga/projects/notifications/templates/emails/tasks/task-delete-subject.jinja:9
 #, python-format
@@ -3041,6 +3066,8 @@ msgid ""
 "\n"
 "[%(project)s] Deleted the task #%(ref)s \"%(subject)s\"\n"
 msgstr ""
+"\n"
+"[%(project)s] Menghapus tugas #%(ref)s \"%(subject)s\"\n"
 
 #: taiga/projects/notifications/templates/emails/userstories/userstory-change-body-html.jinja:12
 #, python-format
