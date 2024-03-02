@@ -12,6 +12,7 @@ django-sr==0.0.4
 djmail==2.0.0
 easy-thumbnails==2.8.5
 gunicorn==20.1.0
+ipython==8.12.0
 netaddr<0.9
 premailer==3.0.1
 psd-tools==1.9.18
