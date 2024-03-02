@@ -65,7 +65,8 @@ RUN set -eux; \
     groupadd --system taiga --gid=999; \
     useradd --system --no-create-home --gid taiga --uid=999 --shell=/bin/bash taiga; \
     mkdir -p /taiga-back/media/exports; \
-    chown -R taiga:taiga /taiga-back; \
+    chown -R taiga:0 /taiga-back; \
+    chmod -R g+rwX /taiga-back; \
     # remove unneeded files and packages
     apt-get purge -y \
        build-essential \
