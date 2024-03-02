@@ -53,6 +53,9 @@ DEFAULT_PROJECT_SLUG_PREFIX = os.getenv('DEFAULT_PROJECT_SLUG_PREFIX', 'False') 
 #########################################
 MEDIA_URL = f"{ TAIGA_URL }/media/"
 DEFAULT_FILE_STORAGE = "taiga_contrib_protected.storage.ProtectedFileSystemStorage"
+AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_STORAGE_BUCKET_NAME")
+if AWS_STORAGE_BUCKET_NAME:
+    DEFAULT_FILE_STORAGE = "settings.storage_backend.PrivateMediaStorage"
 THUMBNAIL_DEFAULT_STORAGE = DEFAULT_FILE_STORAGE
 
 STATIC_URL = f"{ TAIGA_URL }/static/"

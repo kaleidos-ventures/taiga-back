@@ -71,20 +71,22 @@ django==3.2.19
     #   easy-thumbnails
 django-ipware==1.1.6
     # via -r requirements.in
-django-jinja==2.10.2
+django-jinja
     # via -r requirements.in
 django-pglocks==1.0.4
     # via -r requirements.in
 django-picklefield==3.1
     # via -r requirements.in
-django-sampledatahelper==0.4.1
+django-sampledatahelper
     # via -r requirements.in
 django-sites==0.11
     # via -r requirements.in
-django-sr==0.0.4
+django-sr
     # via -r requirements.in
 djmail==2.0.0
     # via -r requirements.in
+django-storages
+boto3==1.27.0
 docopt==0.6.2
     # via psd-tools
 easy-thumbnails==2.8.5
@@ -93,7 +95,7 @@ gunicorn==20.1.0
     # via -r requirements.in
 html5lib==1.1
     # via -r requirements.in
-idna==3.4
+idna
     # via requests
 imageio==2.25.1
     # via scikit-image
@@ -175,7 +177,7 @@ raven==6.10.0
     # via -r requirements.in
 redis==4.5.3
     # via -r requirements.in
-requests==2.27.1
+requests
     # via
     #   -r requirements.in
     #   asana
@@ -220,7 +222,7 @@ tinycss2==1.2.1
     #   cssselect2
 unidecode==0.4.20
     # via -r requirements.in
-urllib3==1.26.14
+urllib3
     # via requests
 vine==5.0.0
     # via

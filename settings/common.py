@@ -683,3 +683,25 @@ if "test" in sys.argv:
     print("Try: \033[1;33mpy.test\033[0m")
     sys.exit(0)
 # NOTE: DON'T INSERT MORE SETTINGS AFTER THIS LINE
+
+
+AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_STORAGE_BUCKET_NAME")
+if AWS_STORAGE_BUCKET_NAME:
+    del STATIC_ROOT
+    AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+    AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+
+    AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+    AWS_S3_OBJECT_PARAMETERS = {    
+        "CacheControl": "max-age=86400",
+    }
+    AWS_LOCATION = "static"
+    AWS_S3_SIGNATURE_VERSION = "s3v4"
+
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, "static"),
+    ]
+
+    STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_LOCATION}/"
+    STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+    DEFAULT_FILE_STORAGE = "settings.storage_backend.PrivateMediaStorage"
