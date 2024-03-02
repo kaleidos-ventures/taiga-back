@@ -216,3 +216,25 @@ PUBLIC_REGISTER_ENABLED = False
 #    "cert": "XXXXXX_get_a_valid_cert_from_jira_XXXXXX",
 #    "pub_cert": "XXXXXX_get_a_valid_pub_cert_from_jira_XXXXXX"
 #}
+
+#########################################
+## PASSWORD STRENGHT POLICY
+#########################################
+
+AUTH_PASSWORD_VALIDATORS = [
+     {
+         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+     },
+     {
+         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+         'OPTIONS': {
+             'min_length': 9,
+         }
+     },
+     {
+         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+     },
+     {
+         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+     },
+]

@@ -12,6 +12,7 @@ from django.utils.translation import gettext as _
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from django.conf import settings
+from django.contrib.auth.password_validation import validate_password
 
 from taiga.auth.exceptions import TokenError
 from taiga.auth.tokens import CancelToken
@@ -212,8 +213,10 @@ class UsersViewSet(ModelCrudViewSet):
         if not password:
             raise exc.WrongArguments(_("New password parameter needed"))
 
-        if len(password) < 6:
-            raise exc.WrongArguments(_("Invalid password length at least 6 characters needed"))
+        try:
+            validate_password(password)
+         except ValidationError as e: 
+            raise exc.WrongArguments(_(str(e.error_list)))
 
         if current_password and not request.user.check_password(current_password):
             raise exc.WrongArguments(_("Invalid current password"))

@@ -6,3 +6,16 @@ DEBUG = True
 TEMPLATES[0]["OPTIONS"]['context_processors'] += "django.template.context_processors.debug"
 
 ENABLE_TELEMETRY = False
+
+#########################################
+## PASSWORD STRENGHT POLICY
+#########################################
+
+AUTH_PASSWORD_VALIDATORS = [
+     {
+         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+         'OPTIONS': {
+             'min_length': 6,
+         }
+     },
+]
