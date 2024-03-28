@@ -70,7 +70,7 @@ PASSWORD_HASHERS = [
 
 # Default configuration for reverse proxy
 USE_X_FORWARDED_HOST = True
-SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTOCOL", "https")
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # Errors report configuration
 SEND_BROKEN_LINK_EMAILS = True
