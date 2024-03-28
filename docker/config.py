@@ -88,7 +88,7 @@ EVENTS_PUSH_BACKEND = "taiga.events.backends.rabbitmq.EventsPushBackend"
 
 EVENTS_PUSH_BACKEND_URL = os.getenv('EVENTS_PUSH_BACKEND_URL')
 if not EVENTS_PUSH_BACKEND_URL:
-    EVENTS_PUSH_BACKEND_URL = f"amqp://{ os.getenv('RABBITMQ_USER') }:{ os.getenv('RABBITMQ_PASS') }@taiga-events-rabbitmq:5672/taiga"
+    EVENTS_PUSH_BACKEND_URL = f"amqp://{ os.getenv('RABBITMQ_USER') }:{ os.getenv('RABBITMQ_PASS') }@{ os.getenv('TAIGA_EVENTS_RABBITMQ_HOST', 'taiga-events-rabbitmq') }:5672/taiga"
 
 EVENTS_PUSH_BACKEND_OPTIONS = {
     "url": EVENTS_PUSH_BACKEND_URL
@@ -103,7 +103,7 @@ from kombu import Queue  # noqa
 
 CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL')
 if not CELERY_BROKER_URL:
-    CELERY_BROKER_URL = f"amqp://{ os.getenv('RABBITMQ_USER') }:{ os.getenv('RABBITMQ_PASS') }@taiga-async-rabbitmq:5672/taiga"
+    CELERY_BROKER_URL = f"amqp://{ os.getenv('RABBITMQ_USER') }:{ os.getenv('RABBITMQ_PASS') }@{ os.getenv('TAIGA_ASYNC_RABBITMQ_HOST', 'taiga-async-rabbitmq') }:5672/taiga"
 
 CELERY_RESULT_BACKEND = None # for a general installation, we don't need to store the results
 CELERY_ACCEPT_CONTENT = ['pickle', ]  # Values are 'pickle', 'json', 'msgpack' and 'yaml'
