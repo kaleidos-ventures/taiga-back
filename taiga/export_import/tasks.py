@@ -27,8 +27,6 @@ from .renderers import ExportRenderer
 
 logger = logging.getLogger('taiga.export_import')
 
-import resource
-
 
 @app.task(bind=True)
 def dump_project(self, user, project, dump_format):
