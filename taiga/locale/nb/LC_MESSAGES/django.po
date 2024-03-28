@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: taiga-back\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-07 20:31+0000\n"
-"PO-Revision-Date: 2021-02-26 11:31+0000\n"
-"Last-Translator: Taiga Dev Team <support@taiga.io>\n"
-"Language-Team: Norwegian Bokmål (http://www.transifex.com/taiga-agile-llc/"
-"taiga-back/language/nb/)\n"
+"PO-Revision-Date: 2024-03-28 12:02+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/taiga/"
+"taiga-back/nb_NO/>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: taiga/auth/api.py:79
 msgid "invalid login type"
@@ -104,7 +104,7 @@ msgstr "Brukernavnet er allerede i bruk."
 
 #: taiga/auth/services.py:139
 msgid "Email is already in use."
-msgstr "Epostadressen er allerede i bruk."
+msgstr "E-postadressen er allerede i bruk."
 
 #: taiga/auth/services.py:172
 msgid "User is already registered."
@@ -207,7 +207,7 @@ msgstr ""
 
 #: taiga/base/api/fields.py:636
 msgid "Enter a valid email address."
-msgstr "Skriv inn en gyldig epostadresse."
+msgstr "Skriv inn en gyldig e-postadresse."
 
 #: taiga/base/api/fields.py:678
 #, python-format
@@ -1016,7 +1016,7 @@ msgstr "fullt navn"
 
 #: taiga/feedback/models.py:16 taiga/users/models.py:126
 msgid "email address"
-msgstr "epostadresse"
+msgstr "e-postadresse"
 
 #: taiga/feedback/models.py:18 taiga/projects/contact/models.py:30
 msgid "comment"
@@ -2372,7 +2372,7 @@ msgstr ""
 
 #: taiga/projects/models.py:86
 msgid "email"
-msgstr "epost"
+msgstr "e-post"
 
 #: taiga/projects/models.py:88
 msgid "create at"
@@ -3349,10 +3349,8 @@ msgid "This user is already a member of the project."
 msgstr "Denne brukeren er allerede et medlem i prosjektet."
 
 #: taiga/projects/services/members.py:46
-#, fuzzy
-#| msgid "new email address"
 msgid "Malformed email adress."
-msgstr "ny epostadresse"
+msgstr "Feilaktig e-postadresse."
 
 #: taiga/projects/services/members.py:134
 #: taiga/projects/services/members.py:181
@@ -4390,7 +4388,7 @@ msgstr ""
 
 #: taiga/users/api.py:163
 msgid "Invalid username or email"
-msgstr "Ugyldig brukernavn eller epost"
+msgstr "Ugyldig brukernavn eller e-postadresse"
 
 #: taiga/users/api.py:172
 msgid "Mail sent successfully!"
@@ -4432,7 +4430,7 @@ msgstr ""
 
 #: taiga/users/api.py:349
 msgid "Mail sended successful!"
-msgstr "Epost sendt!"
+msgstr "E-post sendt!"
 
 #: taiga/users/models.py:87
 msgid "superuser status"
@@ -4522,11 +4520,11 @@ msgstr "fargelegg etiketter"
 
 #: taiga/users/models.py:157
 msgid "email token"
-msgstr "epost token"
+msgstr "e-postsymbol"
 
 #: taiga/users/models.py:159
 msgid "new email address"
-msgstr "ny epostadresse"
+msgstr "ny e-postadresse"
 
 #: taiga/users/models.py:166
 msgid "max number of owned private projects"
@@ -4587,7 +4585,7 @@ msgstr ""
 
 #: taiga/users/templates/emails/change_email-subject.jinja:9
 msgid "[Taiga] Change email"
-msgstr "[Taiga] Endre epost"
+msgstr "[Taiga] Endre e-postadresse"
 
 #: taiga/users/templates/emails/password_recovery-body-html.jinja:12
 #, python-format
